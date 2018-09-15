@@ -8,3 +8,8 @@ render((
     <App />
   </BrowserRouter>
 ), document.getElementById('app'));
+
+var helloWorld = React.DOM.h1(null, "Hello, world!");
+var placehold = document.getElementById('placeholder');
+
+redner(helloWorld, placehold);

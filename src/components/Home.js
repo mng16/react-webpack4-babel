@@ -5,8 +5,7 @@ import BBCNewsHeadlines from './BBCNewsHeadlines';
 const Home = () => (
   <div>
     <h1>Welcome to the Tornadoes Website!</h1>
-    
-    <BBCNewsHeadlines />
+    <People/>
   </div>
 )
 
