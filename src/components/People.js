@@ -1,40 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+import FullPeople from './FullPeople'
+import Player from './Player'
 
-class People extends Component {
-	constructor() {
-		super();
-		this.state = {
-			pictures: [],
-		};
-	}
+// The People component matches one of two different routes
+// depending on the full pathname
+const People = () => (
+  <Switch>
+    <Route exact path='/People' component={FullPeople}/>
+    <Route path='/People/:number' component={Player}/>
+  </Switch>
+)
 
-	componentDidMount() {
-
-		fetch('https://randomuser.me/api/?results=10')
-		.then(results => {
-			return results.json();
-		}).then(data => {
-			let pictures = data.results.map((pic) => {
-			return(
-				<div key={pic.results}>
-					<img src={pic.picture.medium} />
-				</div>
-			)
-		})
-		this.setState({pictures: pictures});
-		console.log("state", this.state.pictures);
-		})
-	}
-
-	render() {
-		return (
-			<div className="container2">
-				<div className="container1">
-					{this.state.pictures}
-				</div>
-			</div>
-		);
-	}
-}
 
 export default People
