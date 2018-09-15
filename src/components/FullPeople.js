@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 // a link to their profile page.
 const FullPeople = () => (
   <div>
-    <h1>People</h1>
+    <h2>People</h2>
     <ul>
       {
         PlayerAPI.all().map(p => (

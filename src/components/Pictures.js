@@ -1,10 +1,9 @@
 import React from 'react'
 import Pics from './Pics'
-import BBCNewsHeadlines from './BBCNewsHeadlines';
 
 const Pictures = () => (
   <div>
-    <h1>Pictures</h1>
+    <h2>Pictures</h2>
     <Pics/>
   </div>
 )

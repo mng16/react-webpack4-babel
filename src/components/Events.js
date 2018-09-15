@@ -2,7 +2,7 @@ import React from 'react'
 
 const Events = () => (
   <div>
-    <h1>Events</h1>
+    <h2>Events</h2>
     <ul>
       <li>5/12 Music @ Evergreens</li>
       <li>9/12 Federer vs Nadal @ Wimbledon</li>

@@ -10,14 +10,16 @@ class Pics extends Component {
 
 	componentDidMount() {
 
-		fetch('https://randomuser.me/api/?results=10')
+		fetch('https://randomuser.me/api/?results=100')
 		.then(results => {
 			return results.json();
 		}).then(data => {
 			let pictures = data.results.map((pic) => {
 			return(
 				<div key={pic.results}>
-					<img src={pic.picture.medium} />
+					<img 
+						style={{float: "left"}}
+					 	src={pic.picture.medium} />
 				</div>
 			)
 		})
